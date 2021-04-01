@@ -24,15 +24,20 @@ class SixActivity : BaseActivity<ActivitySixBinding>(), SixContract.View {
 
     override fun setup() {
         presenter.bind(this)
-        // setup recycler view
+        setupRV()
+        setListeners()
+    }
+
+    private fun setupRV(){
         diceAdapter.listener = diceListener
         with(binding.rvDice){
             layoutManager = GridLayoutManager(this@SixActivity, 2)
-//            layoutManager = LinearLayoutManager(this@SixActivity)
             adapter = diceAdapter
         }
         diceAdapter.initDiceValues()
+    }
 
+    private fun setListeners(){
         binding.btnRollAll.setOnClickListener {
             presenter.rollAllDices()
         }

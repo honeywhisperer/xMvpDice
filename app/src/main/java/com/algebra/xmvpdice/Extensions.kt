@@ -18,10 +18,23 @@ fun withDelay(timeDelay: Long, predicate: () -> Unit) {
 
 fun withRandomDelay(timeDelay: Long, predicate: () -> Unit) {
     CoroutineScope(IO).launch {
-        val actualDelayTime = Random.nextLong(timeDelay)
+        val actualDelayTime =
+            (timeDelay * 0.2).toLong() + Random.nextLong((timeDelay * 0.8).toLong())
         delay(actualDelayTime)
         CoroutineScope(Main).launch {
             predicate()
         }
+    }
+}
+
+fun String.convertToDiceFace(): String {
+    return when (this) {
+        "1" -> "⚀"
+        "2" -> "⚁"
+        "3" -> "⚂"
+        "4" -> "⚃"
+        "5" -> "⚄"
+        "6" -> "⚅"
+        else -> "?"
     }
 }

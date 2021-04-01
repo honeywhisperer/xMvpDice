@@ -1,5 +1,7 @@
 package com.algebra.xmvpdice.six
 
+import com.algebra.xmvpdice.convertToDiceFace
+
 class SixPresenterImpl(private val sixInteractor: SixInteractor) : SixContract.Presenter {
 
     private var view: SixContract.View? = null
@@ -17,7 +19,7 @@ class SixPresenterImpl(private val sixInteractor: SixInteractor) : SixContract.P
         sixInteractor.rollDices(dicePosition, object : SixContract.Model.RollDiceListener {
             override fun setNewValueForDice(dicePosition: Int, newValue: Int) {
                 view?.hideProgress()
-                view?.setNewValueDice(dicePosition, newValue.toString())
+                view?.setNewValueDice(dicePosition, newValue.toString().convertToDiceFace())
             }
         })
     }

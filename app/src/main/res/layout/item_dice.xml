@@ -10,10 +10,12 @@
         android:id="@+id/btnDice"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:textSize="48sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="1" />
+        tools:text="⚅" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
