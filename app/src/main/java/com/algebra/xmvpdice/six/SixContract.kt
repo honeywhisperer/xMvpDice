@@ -12,10 +12,7 @@ interface SixContract {
         fun unbind()
         fun rollDiceAtPosition(dicePosition: Int)
 //        fun setNewDiceValue(dicePosition: Int, newValue: Int)
-    }
-
-    interface ItemView{
-        fun bind (item: String)
+        fun rollAllDices()
     }
 
     interface Model{

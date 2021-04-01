@@ -32,6 +32,10 @@ class SixActivity : BaseActivity<ActivitySixBinding>(), SixContract.View {
             adapter = diceAdapter
         }
         diceAdapter.initDiceValues()
+
+        binding.btnRollAll.setOnClickListener {
+            presenter.rollAllDices()
+        }
     }
 
     override fun setNewValueDice(dicePosition: Int, value: String) {

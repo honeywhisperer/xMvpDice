@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">xMvpDice</string>
     <string name="roll">Roll</string>
+    <string name="roll_all">Roll All</string>
 </resources>

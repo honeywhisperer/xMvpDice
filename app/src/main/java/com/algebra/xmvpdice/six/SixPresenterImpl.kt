@@ -22,4 +22,10 @@ class SixPresenterImpl(private val sixInteractor: SixInteractor) : SixContract.P
         })
     }
 
+    override fun rollAllDices() {
+        (0..5).forEach {
+            rollDiceAtPosition(it)
+        }
+    }
+
 }

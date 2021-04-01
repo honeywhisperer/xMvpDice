@@ -10,22 +10,29 @@
         android:id="@+id/rvDice"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/item_dice"
         android:layout_marginStart="80dp"
-        android:layout_marginEnd="80dp"
         android:layout_marginTop="180dp"
+        android:layout_marginEnd="80dp"
         android:layout_marginBottom="80dp"
-        />
+        tools:listitem="@layout/item_dice" />
 
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:layout_constraintVertical_bias="0.1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <Button
+        android:id="@+id/btnRollAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/roll_all"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
