@@ -14,6 +14,10 @@ interface SixContract {
 //        fun setNewDiceValue(dicePosition: Int, newValue: Int)
     }
 
+    interface ItemView{
+        fun bind (item: String)
+    }
+
     interface Model{
         fun interface RollDiceListener{
             fun setNewValueForDice(dicePosition: Int, newValue: Int)

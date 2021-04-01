@@ -39,8 +39,9 @@ class DiceAdapter: RecyclerView.Adapter<DiceAdapter.DiceViewHolder>() {
 
     inner class DiceViewHolder(private val itemDiceBinding: ItemDiceBinding) : RecyclerView.ViewHolder(itemDiceBinding.root){
         init {
-            itemDiceBinding.btnDice.setOnClickListener {  }
-            listener?.onDiceClick(layoutPosition)
+            itemDiceBinding.btnDice.setOnClickListener {
+                listener?.onDiceClick(layoutPosition)
+            }
         }
         fun bind(value: String){
             itemDiceBinding.btnDice.text = value
